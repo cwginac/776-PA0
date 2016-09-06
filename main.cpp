@@ -76,6 +76,5 @@ int main ()
 		currentNode = currentNode->parent;
 	}
 
-	system("pause");
 	return 0;
 }
