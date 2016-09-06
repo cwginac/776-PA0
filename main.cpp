@@ -9,7 +9,7 @@ int main ()
 {
 	// Ask user for how many missionaries and cannibals there are
 	int numberOfMC = 0;
-	cout << "Please enter how many missionaries and cannibals there are (enter one number for both):";
+	cout << "Please enter how many missionaries and cannibals there are (enter one number for both):\n";
 	cin >> numberOfMC;
 
 	// Flag to determine what direction the boat is going in
@@ -63,12 +63,13 @@ int main ()
 	while (currentNode != NULL && foundFinalState)
 	{
 		cout << "-----------------------------" << endl;
+
+		cout << currentNode->description.c_str() << endl;
+
 		if(!currentNode->direction)
 			cout << "To other side." << endl;
 		else
 			cout << "To starting side." << endl;
-
-		cout << currentNode->description.c_str() << endl;
 
 		cout << "Starting Side: " << currentNode->startingSide.first << ", " << currentNode->startingSide.second << endl;
 		cout << "Other Side: " << currentNode->otherSide.first << ", " << currentNode->otherSide.second << endl;
